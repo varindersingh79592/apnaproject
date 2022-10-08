@@ -30,7 +30,7 @@ function SignInPage() {
         <input
           type="password"
           className="input_value"
-          placeholder="Please Enter your password"
+          placeholder="Please Enter your password please enter "
           value={password}
           onChange={passwordUpdation}
         ></input>
