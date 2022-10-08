@@ -15,11 +15,11 @@ function SignInPage() {
       <div id="heading">
         <h1>Sign In to avail our services</h1>
         <h3>Please Enter your Details</h3>
-        <label>Username </label>
+        <label>Username</label>
         <input
           type="text"
           className="input_value"
-          placeholder="Enter your Username"
+          placeholder="Please Enter your Username"
           value={userName}
           onChange={userNameUpdation}
         ></input>
@@ -30,7 +30,7 @@ function SignInPage() {
         <input
           type="password"
           className="input_value"
-          placeholder="Enter your password"
+          placeholder="Please Enter your password"
           value={password}
           onChange={passwordUpdation}
         ></input>
