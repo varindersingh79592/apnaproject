@@ -10,12 +10,22 @@ function SignInPage() {
   const passwordUpdation = (event) => {
     updatePassword(event.target.value);
   };
+  const formHandler = (event) => {
+    event.preventDefault();
+    const userData = {
+      name: "userName",
+      password: "password",
+    };
+    updateUserName("");
+    updatePassword("");
+  };
+
   return (
-    <form className="complete__form">
-      <div id="heading">
-        <h1>Sign In to avail our services</h1>
-        <h3>Please Enter your Details</h3>
-        <label>Username</label>
+    <div id="body">
+      <form className="complete__form" onSubmit={formHandler}>
+        <h1 className="signHeading">Sign In to avail our services</h1>
+        <h3 className="signHeading1">Please Enter your Details</h3>
+
         <input
           type="text"
           className="input_value"
@@ -25,19 +35,20 @@ function SignInPage() {
         ></input>
         <br></br>
         <br></br>
-        <br></br>
-        <label>Password </label>
         <input
           type="password"
           className="input_value"
-          placeholder="Please Enter your password please enter "
+          placeholder="Please Enter your password "
           value={password}
           onChange={passwordUpdation}
         ></input>
-      </div>
-      <br></br>
-      <button type="submit">Sign In</button>
-    </form>
+        <br></br>
+        <br></br>
+        <button className="submitButton" type="submit">
+          Sign In
+        </button>
+      </form>
+    </div>
   );
 }
 
